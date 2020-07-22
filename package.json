@@ -2,7 +2,7 @@
   "name": "react-library",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ergunirem.github.io/react-library",
+  "homepage": "https://ergunirem.github.io/react-library",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

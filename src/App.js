@@ -15,8 +15,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const booksData = JSON.parse(localStorage.getItem('localBooks'))
-    this.setState({ books: booksData })
+    if(localStorage.getItem('localBooks') !== null) {
+      const booksData = JSON.parse(localStorage.getItem('localBooks'))
+      this.setState({ books: booksData })
+      } 
   }
 
   handleSubmit = (newBook) => {

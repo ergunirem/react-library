@@ -28,8 +28,8 @@ class InputForm extends Component {
             status: this.state.bookStatus
         }
 
-        if (newBook.title === '' || newBook.author === '' || newBook.pages === '') {
-            alert('Please fill in all of the fields')
+        if (newBook.title === '' || newBook.author === '' || newBook.pages === '' || newBook.status === '') {
+            alert('Please fill in all of the fields and select book\'s status')
 
         } else {
             this.props.onClick(newBook);
@@ -59,7 +59,7 @@ class InputForm extends Component {
                     <select
                         onChange={this.handleChange}
                         value={this.state.bookStatus} name="bookStatus" id="read">
-                        <option disabled>Read/To Read</option>
+                        <option disabled value="">Read/To Read</option>
                         <option value="read">read</option>
                         <option value="not-read">to-read</option>
                     </select>

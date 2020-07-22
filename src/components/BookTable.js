@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BookTableRow from './BookTableRow'
+import { FaTrash } from 'react-icons/fa';
 
 class BookTable extends Component {
     constructor(props) {
@@ -28,7 +29,15 @@ class BookTable extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {bookComponents}
+                        {this.props.booksData.length === 0 
+                        ? <tr>
+                                <td>Sample Title</td>
+                                <td>Sample Author</td>
+                                <td>999</td>
+                                <td>to-read</td>
+                                <td><button onClick={this.handleDelete}><FaTrash /></button></td>
+                            </tr>
+                        : bookComponents }
                     </tbody>
                 </table>
             </div>
